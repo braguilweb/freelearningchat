@@ -64,7 +64,7 @@ Este projeto está licenciado sob a licença [MIT](LICENSE) para fins de estudo 
 
 ---
 
-**Contribuições são bem-vindas!**
+**Contribuições são bem-vindas!!!**
 
 **Criado com ❤️ por [braguilweb](https://github.com/braguilweb)**
 

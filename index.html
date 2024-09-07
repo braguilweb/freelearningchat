@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HerbAlquimia - A Magia das Plantas Medicinais</title>
+</head>
+<body>
+    <header>
+        <h1>HerbAlquimia</h1>
+        <div id="cabecalho" class="cabecalho">
+            <h2>Descubra a Alquimia das Ervas para Sua Saúde</h2>
+            <p>HerbAlquimia é sua guia para descobrir chás com propriedades medicinais. Explore receitas, dicas de uso e informações sobre ervas que podem auxiliar no seu bem-estar. Lembre-se: os chás podem ser uma ajuda natural, mas o acompanhamento de um médico é sempre essencial."</p>
+             
+        </div>
+    </header> 
+    <section class="pesquisa">           
+        <!--    <input type="text" placeholder="Ex.: Brônquios"> -->
+        <div id="button" class="button">
+            <button id="botao-comecar" onclick="exibirMenuFixo()" type="button">Começar</button>  
+            <button id="botao-sair" onclick="reiniciarApp()" type="button">Sair</button> 
+        </div>    
+        <div class="resultados" id="resultados">
+         <!-- RENDERIZADO PELA FUNÇÃO atualizarResultados em app.js
+            <div class="mini-card">
+                <p id="nomeComumdaPlanta">${planta.nomeComumDaPlanta}</p>
+                <img src=${planta.imagemDaPlanta} alt="" srcset="">
+                <p id="nomeComumdaPlanta">${planta.nome}</p>
+                <p id="dadosMedicinais">${planta.indicacao}</p>
+                <button onclick="clicarEmVerMais(${planta.id})">Ver mais</button> 
+            </div>                    --> 
+        </div>      
+    </section>
+    <section id="card-completo">
+        <!-- 
+        RENDERIZADO PELA FUNÇÃO clicarEmVerMais() em app.js
+        <div class="card">
+            <img class="plant-image" src="${plantaEscolhida.imagemDaPlanta}" alt="Imagem da Planta ${plantaEscolhida.nomeComumDaPlanta}">
+            <div class="card-content">
+                <h2 class="plant-name">${plantaEscolhida.nomeComumDaPlanta} <span>(${plantaEscolhida.nomeCientifico})</span></h2>
+                <p class="medicinal-info"><strong>Dados Medicinais:</strong> ${plantaEscolhida.dadosMedicinais}</p>
+                <p class="recipe"><strong>Receita:</strong> ${plantaEscolhida.receita}</p>
+                <p class="contraindications"><strong>Contraindicações:</strong> ${plantaEscolhida.contraIndicacoes}</p>
+                <p class="medical-tips"><strong>Dicas Médicas:</strong> ${plantaEscolhida.dicasMedicas}</p>
+                <div class="system-info">
+                    <p><strong>Sistema:</strong> ${plantaEscolhida.nome}</p>
+                    <p><strong>Função:</strong> ${plantaEscolhida.funcao}</p>
+                    <p><strong>Componentes:</strong> ${plantaEscolhida.componentes.join(', ')}</p>
+                </div>
+                <div class="button-voltar">
+                    <button type="button" onclick="voltar()">Voltar</button>
+                </div>
+            </div>
+        </div>                               
+         -->    
+    </section>
+    <section id="menu-fixo" class="menu-fixo">
+        <div class="menu">
+            <ul class="listas" id="lista-sistemas">
+            <!--
+            <li class="lista-sistema">
+            <a href="#" onclick="exibirDetalhesDoSistema(event)" >${dado.nome}</a>
+            </li>                
+            -->                
+            </ul>                    
+        </div>
+    </section>    
+    <footer class="rodape">
+        <p>2024 - Desenvolvido por Guilherme Braga</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/guilherme-de-almeida-braga/" target="_blank">Lnkedin</a></li>
+            <li><a href="https://github.com/braguilweb" target="_blank">GitHub</a></li>
+        </ul>        
+    </footer>    
+    <script src="dados.js"></script>
+    <script src="dados-sistemas.js"></script>
+    <script src="app.js"></script>    
+</body>
+</html>

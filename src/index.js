@@ -4,6 +4,7 @@ const express = require('express');
 const pg = require('pg');
 const cors = require('cors');
 const helmet = require('helmet');
+const userController = require('./controllers/users/usersController')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,6 +38,9 @@ pool.connect()
  * CONFIGURAÇÕES DE ROTAS
 */
 
+
+app.post('/users', userController.createUser);
+
 //Rota de teste da API
 app.get('/', (req, res)=> {
     res.send('API do FreeLearninChat está funcionando!')
@@ -52,6 +56,7 @@ app.get('/test-db', async (req, res) => {
         res.status(500).json({ error: 'Erro ao consultar o banco de dados' })
     }
 });
+
 
 
 
